@@ -6,7 +6,7 @@ locals {
     app  = "web"
   }
   tags = {
-    "Environment" = "Devt"
+    "Environment" = "Dev"
   }
 }
 
@@ -14,7 +14,7 @@ locals {
 module "resource_groups" {
   source = "git::https://github.com/BrettOJ/tf-az-module-resource-group?ref=main"
   resource_groups = {
-    vnp = {
+    rg = {
       name                   = var.resource_group_name
       location               = var.location
       naming_convention_info = local.naming_convention_info
