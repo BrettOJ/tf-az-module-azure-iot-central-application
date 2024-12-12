@@ -48,3 +48,7 @@ variable "identity" {
   }
 }
 
+variable "naming_convention_info" {
+  description = "A naming_convention block as defined below."
+  type        = map(string)
+  }
